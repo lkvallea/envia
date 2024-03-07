@@ -1,0 +1,79 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;400;600&display=swap");
+@font-face {
+  font-family: "thesecret";
+  src: url("../fonts/thesecret.woff2") format("woff2"),
+    url("../fonts/thesecret.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "League Spartan", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    background: #fff;
+    color: #262626;
+  }
+  
+  .unscrollable {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+  }
+
+  #wrapper {
+    position: relative;
+    width: 80%;
+    margin: auto;
+  }
+
+  section{
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 55px;
+  }
+
+  span{
+    font-weight: 700;
+    font-size: 20px;
+    color: #7d2991;
+  }
+  
+  .btn {
+    /*btn global*/
+    display: block;
+    /* background: #fff; */
+    border: 1px #7d2991 solid;
+    color: #7d2991;
+    text-transform: uppercase;
+    padding: 10px 10px 8px;
+    width: auto;
+    min-width: 120px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  
+  .btn:hover {
+    background: #7d2991;
+    border-color: #7d2991;
+    color: #fff;
+  }
