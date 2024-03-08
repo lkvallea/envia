@@ -1,7 +1,7 @@
 <?php
 // Configurar las opciones del servidor WebSocket
 //$host = 'localhost';
-$host = '192.168.100.143';
+$host = 'TU IP';
 $port = 9090;
 $address = "0.0.0.0";
 
@@ -73,7 +73,7 @@ function perform_handshaking($client)
 }
 
 function check_new_orders(){
-    $host = "192.168.100.143:3306";
+    $host = "TU IP:TU PUERTO";
     $ursql = "envia";
     $pass = "As6zUNeFi._I97ng";
     $db = "envia";

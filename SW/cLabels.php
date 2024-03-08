@@ -22,26 +22,26 @@ class cLabels extends cConections
         $response = $this->call_socket();
         $request_body = json_encode($this->request_body);
         $authorization = "Authorization: Bearer " . $this->token;
-        // $curl = curl_init();
-        // curl_setopt_array($curl, array(
-        //     CURLOPT_URL => $this->environment,
-        //     CURLOPT_RETURNTRANSFER => true,
-        //     CURLOPT_ENCODING => '',
-        //     CURLOPT_MAXREDIRS => 10,
-        //     CURLOPT_TIMEOUT => 0,
-        //     CURLOPT_FOLLOWLOCATION => true,
-        //     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        //     CURLOPT_CUSTOMREQUEST => 'POST',
-        //     CURLOPT_POSTFIELDS => $request_body,
-        //     CURLOPT_HTTPHEADER => array(
-        //         'Content-Type: application/json',
-        //         $authorization
-        //     ),
-        // ));
-        // $response = curl_exec($curl);
-        // curl_close($curl);
-        // $response = json_decode($response);
-        $response = json_decode($this->responseEnviaTestGenerate);
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $this->environment,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => $request_body,
+            CURLOPT_HTTPHEADER => array(
+                'Content-Type: application/json',
+                $authorization
+            ),
+        ));
+        $response = curl_exec($curl);
+        curl_close($curl);
+        $response = json_decode($response);
+       // $response = json_decode($this->responseEnviaTestGenerate);
         if (isset($response->meta) && $response->meta == 'generate') {
             $mysql = "INSERT INTO labels (trackingNumber) VALUES (?) ";
             $tPr = "s";
@@ -75,7 +75,7 @@ class cLabels extends cConections
 
     private function call_socket()
     {
-        $host = "YOUR ID";
+        $host = "TU IP";
         $puerto = 9090;
         $fp = stream_socket_client($host . ":" . $puerto, $errno, $errstr);
         if (!$fp) {

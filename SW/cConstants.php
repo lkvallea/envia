@@ -3,7 +3,7 @@
 
 class cConstants{
         
-    public $host = "localhost:3306";
+    public $host = "localhost:TU PUERTO";
 
     public $ursql = "envia";
 
@@ -11,7 +11,7 @@ class cConstants{
 
     public $db = "envia";
 
-    public $token = "62004bcaf2ae9432a25d9d6d2d2bd44279d9539349d94e2fab658eb7c4ad9d77";
+    public $token = "TOKEN ACCES ENVIA";
 
     public $environment = "https://api-test.envia.com/ship/generate/";
 
@@ -19,9 +19,9 @@ class cConstants{
 
     public $request_body = [
         "origin" => [
-            "name" => "LUIS ENRIQUE VALLE ASCENCIO",
+            "name" => "LUIS VALLE",
             "company" => "envia",
-            "email" => "LK.VALLE.A@GMAIL.COM",
+            "email" => "VALLE.A@GMAIL.COM",
             "phone" => "5585321524",
             "street" => "BAHIA  LOS SANTOS",
             "number" => "1",
@@ -35,7 +35,7 @@ class cConstants{
         "destination" => [
             "name" => "luis valle",
             "company" => null,
-            "email" => "lk.valle.a@gmail.com",
+            "email" => "valle.a@gmail.com",
             "phone" => "5585321524",
             "street" => "francisco villa",
             "number" => "100",
@@ -56,7 +56,7 @@ class cConstants{
                     "width" => 5,
                     "height" => 2
                 ],
-                "weightt" => 1,
+                "weight" => 1,
                 "insurance" => 5,
                 "declaredValue" => 400,
                 "weightUnit" => "KG",

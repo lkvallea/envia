@@ -11,6 +11,7 @@ $(document).ready(function () {
       dataType: "json",
       ContentType: "application/json",
       success: function (data) {
+        if(data.meta == "OK")
         alert("Se hizo la compra")
         console.log(data);
       },
